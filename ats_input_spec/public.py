@@ -291,7 +291,7 @@ def add_observations_water_balance(main, region,
 
     # - subsurface groundwater net gain/loss
     if region == 'computational domain':
-        observ3 = add_observeable(obs, 'net groundwater flux [mol d^-1]', 'water_flux', 'external sides',
+        observ3 = add_observeable(obs, 'net groundwater flux [mol d^-1]', 'water_flux', 'external_sides',
                              'extensive integral', 'face', time_integrated=True)
     else:
         observ3 = add_observeable(obs, 'net groundwater flux [mol d^-1]', 'water_flux', boundary_region,
