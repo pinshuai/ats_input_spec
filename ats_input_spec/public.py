@@ -532,12 +532,12 @@ def add_lai_point_evaluators(main, lai_filename, lc_types, crosswalk=None):
     ev = main['state']['evaluators'].append_empty('canopy-leaf_area_index')
     ev.set_type('independent variable', known_specs['independent-variable-function-evaluator-spec'])
 
-    # other is 0 LAI
-    entry_other = ev['function'].append_empty('Other')
-    entry_other['region'] = 'Other'
-    entry_other['component'] = 'cell'
-    entry_other_func = entry_other['function'].set_type('constant', known_specs['function-constant-spec'])
-    entry_other_func['value'] = 0.
+    # # other is 0 LAI
+    # entry_other = ev['function'].append_empty('Other')
+    # entry_other['region'] = 'Other'
+    # entry_other['component'] = 'cell'
+    # entry_other_func = entry_other['function'].set_type('constant', known_specs['function-constant-spec'])
+    # entry_other_func['value'] = 0.
 
     for lc_type in lc_types:
         if lc_type != 'Other':
