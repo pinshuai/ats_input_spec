@@ -323,7 +323,6 @@ def add_observations_water_balance(main, region,
                   ]
     avg_to_obs = [('surface-air_temperature', 'air temperature [K]'),
                   ('snow-water_equivalent', 'snow water equivalent [m]'),
-                  ('surface-relative_humidity', 'relative humidity [-]'),
                   ('surface-incoming_shortwave_radiation', 'incoming shortwave radiation [W m^-2]'),]
 
     if has_canopy:
