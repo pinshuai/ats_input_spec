@@ -307,6 +307,10 @@ def add_observations_water_balance(main, region,
     observ3['direction normalized flux'] = True
     if region != 'computational domain':
         observ3['direction normalized flux relative to region'] = region
+
+    # - surface-subsurface exchange flux, positive--exfiltration?
+    observ4 = add_observeable(obs, 'exfiltration [mol d^-1]', 'surface-surface_subsurface_flux', surface_region,
+                             'extensive integral', 'cell', time_integrated=True)
     
     # - surface average quantities
     flux_to_obs = [('surface-precipitation_rain','rain precipitation [m d^-1]'),
@@ -316,7 +320,7 @@ def add_observations_water_balance(main, region,
                    ('surface-transpiration', 'transpiration [m d^-1]'),
                    ('surface-total_evapotranspiration', 'total evapotranspiration [m d^-1]'),
                    ('snow-melt', 'snowmelt [m d^-1]'),
-                   ('surface-surface_subsurface_flux', 'exfiltration [mol d^-1]'),]
+                   ] 
 
     ext_to_obs = [('surface-water_content', 'surface water content [mol]'),
                   ('snow-water_content', 'snow water content [mol]'),
